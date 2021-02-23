@@ -36,8 +36,8 @@ public class DataLoader implements ApplicationRunner {
          User bela = new User("Bela");
          userRepository.save(bela);
 
-         Folder megadollars = new Folder("megadollars", mila);
-         folderRepository.save(megadollars);
+         Folder megaDollars = new Folder("megaDollars", mila);
+         folderRepository.save(megaDollars);
 
          Folder desperateHouseWives = new Folder("desperateHouseWives", alex);
          folderRepository.save(desperateHouseWives);
@@ -45,7 +45,7 @@ public class DataLoader implements ApplicationRunner {
          Folder house = new Folder("house", bela);
          folderRepository.save(house);
 
-         File cashCashMoneyMoney = new File("cashCashMoneyMoney", "img", 25, megadollars);
+         File cashCashMoneyMoney = new File("cashCashMoneyMoney", "img", 25, megaDollars);
          fileRepository.save(cashCashMoneyMoney);
 
          File iLoveBree = new File("iLoveBree", "img", 35, desperateHouseWives);
