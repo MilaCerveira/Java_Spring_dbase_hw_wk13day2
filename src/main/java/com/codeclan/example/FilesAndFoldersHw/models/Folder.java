@@ -1,6 +1,7 @@
 package com.codeclan.example.FilesAndFoldersHw.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,9 +22,9 @@ public class Folder {
     @Column(name = "user")
     private User user;
 
-    public Folder(String title, List<File> files, User user) {
+    public Folder(String title, User user) {
         this.title = title;
-        this.files = files;
+        this.files = new ArrayList<File>();
         this.user = user;
     }
 
