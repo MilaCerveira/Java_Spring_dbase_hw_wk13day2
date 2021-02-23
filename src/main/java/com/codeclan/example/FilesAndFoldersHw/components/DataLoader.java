@@ -1,5 +1,6 @@
 package com.codeclan.example.FilesAndFoldersHw.components;
 
+import com.codeclan.example.FilesAndFoldersHw.models.File;
 import com.codeclan.example.FilesAndFoldersHw.models.Folder;
 import com.codeclan.example.FilesAndFoldersHw.models.User;
 import com.codeclan.example.FilesAndFoldersHw.repositories.FileRepository;
@@ -43,6 +44,17 @@ public class DataLoader implements ApplicationRunner {
 
          Folder house = new Folder("house", bela);
          folderRepository.save(house);
+
+         File cashCashMoneyMoney = new File("cashCashMoneyMoney", "img", 25, megadollars);
+         fileRepository.save(cashCashMoneyMoney);
+
+         File iLoveBree = new File("iLoveBree", "img", 35, desperateHouseWives);
+         fileRepository.save(iLoveBree);
+
+         File newShower = new File("newShower", "doc", 15, house);
+         fileRepository.save(newShower);
+
+
     }
 
 }
