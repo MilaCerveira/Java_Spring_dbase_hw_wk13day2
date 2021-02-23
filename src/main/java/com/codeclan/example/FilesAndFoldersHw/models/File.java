@@ -21,8 +21,8 @@ public class File {
     private int size;
 
     @ManyToOne
-    @JsonIgnoreProperties({"files"})
     @JoinColumn(name="folder_id", nullable = false)
+//    @JsonIgnoreProperties({"files"})
     private Folder folder;
 
     public File(String name, String extension, int size, Folder folder) {
