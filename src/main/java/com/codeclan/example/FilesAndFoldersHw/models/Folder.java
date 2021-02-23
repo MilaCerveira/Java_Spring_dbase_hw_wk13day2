@@ -1,12 +1,24 @@
 package com.codeclan.example.FilesAndFoldersHw.models;
 
+import javax.persistence.*;
 import java.util.List;
 
+@Entity
+@Table(name = "folders")
+
 public class Folder {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "title")
     private String title;
+
+    @OneToMany
     private List<File> files;
+
+    @Column(name = "user")
     private User user;
 
     public Folder(String title, List<File> files, User user) {
