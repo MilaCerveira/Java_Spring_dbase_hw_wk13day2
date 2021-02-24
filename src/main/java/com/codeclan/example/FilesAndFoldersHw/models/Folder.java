@@ -22,7 +22,10 @@ public class Folder {
     @OneToMany(mappedBy = "folder")
     private List<File> files;
 
-    @Column(name = "user")
+//    @Column(name = "user")
+    @JsonIgnoreProperties({"folders"})
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     public Folder(String title, User user) {
